@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/break1.mp3-8ba6129f9846bcf44748531396ebb50a.mp3str"
+
+[deps]
+
+source_file="res://src/sound/music/break1.mp3"
+dest_files=[ "res://.import/break1.mp3-8ba6129f9846bcf44748531396ebb50a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,132 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/sound/music/Mystical.ogg" type="AudioStream" id=2]
+[ext_resource path="res://src/npcs/Khali.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/interface/PauseMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/RuralMap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/interface/ProgressBars.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/RuralScene.gd" type="Script" id=7]
+[ext_resource path="res://src/UrbanEntrance.gd" type="Script" id=8]
+[ext_resource path="res://src/interface/MiniMap.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/objects/Barrel.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/npcs/Reza.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/interface/GameOverMenu.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/interface/WinMenu.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/interface/AlertMessage.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/npcs/Serek.tscn" type="PackedScene" id=15]
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 28.0
+height = 28.0
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="RuralScene" type="YSort"]
+position = Vector2( 1, 2 )
+script = ExtResource( 7 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -650, -532 )
+scale = Vector2( 1, 1 )
+
+[node name="Map" parent="." instance=ExtResource( 5 )]
+z_index = 1
+
+[node name="Khali" parent="." instance=ExtResource( 3 )]
+position = Vector2( 739, 420 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -5.0
+autoplay = true
+
+[node name="UrbanEntrance" type="Area2D" parent="." groups=["minimap_objects"]]
+position = Vector2( 5604, 1944 )
+z_index = 2
+priority = 1.0
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UrbanEntrance"]
+position = Vector2( -88, -58 )
+rotation = 1.5708
+shape = SubResource( 4 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+follow_viewport_enable = true
+
+[node name="Control" type="Control" parent="CanvasLayer2"]
+visible = false
+anchor_left = 5.321
+anchor_top = 2.947
+anchor_right = 5.321
+anchor_bottom = 2.947
+margin_left = -46.7041
+margin_top = -28.2001
+margin_right = 240.296
+margin_bottom = 48.7999
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CanvasLayer2/Control"]
+visible = false
+anchor_left = 0.0104529
+anchor_top = 0.402597
+anchor_right = 0.0104529
+anchor_bottom = 0.402597
+margin_left = 1.7643e-05
+margin_top = 3.05176e-05
+margin_right = 150.0
+margin_bottom = 24.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = true
+text = "Ir a la ciudad"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Barrel2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 858, 761 )
+scale = Vector2( 2, 2 )
+
+[node name="Barrel3" parent="." instance=ExtResource( 10 )]
+position = Vector2( -547, 1646 )
+scale = Vector2( 2, 2 )
+
+[node name="Reza" parent="." instance=ExtResource( 11 )]
+position = Vector2( -613, 1817 )
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="MiniMap" parent="GUI" instance=ExtResource( 9 )]
+player = NodePath("../../Player")
+
+[node name="ProgressBars" parent="GUI" instance=ExtResource( 6 )]
+
+[node name="PauseMenu" parent="GUI" instance=ExtResource( 4 )]
+
+[node name="GameOverMenu" parent="GUI" instance=ExtResource( 12 )]
+
+[node name="WinMenu" parent="GUI" instance=ExtResource( 13 )]
+
+[node name="AlertMessage" parent="GUI" instance=ExtResource( 14 )]
+
+[node name="Serek" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1851, -114 )
+scale = Vector2( 1, 1 )
+
+[connection signal="body_entered" from="UrbanEntrance" to="." method="_on_UrbanEntrance_body_entered"]

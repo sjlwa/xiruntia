@@ -1,0 +1,62 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/sprites/characters/player/03.png" type="Texture" id=1]
+[ext_resource path="res://src/player/Player.gd" type="Script" id=2]
+[ext_resource path="res://src/sprites/characters/player/01.png" type="Texture" id=3]
+[ext_resource path="res://src/sprites/characters/player/06.png" type="Texture" id=4]
+[ext_resource path="res://src/sprites/characters/player/05.png" type="Texture" id=5]
+[ext_resource path="res://src/sprites/characters/player/02.png" type="Texture" id=6]
+[ext_resource path="res://src/sprites/characters/player/04.png" type="Texture" id=7]
+[ext_resource path="res://src/sound/hey-cartoon-voice-1.wav" type="AudioStream" id=9]
+[ext_resource path="res://src/sound/hey-cartoon-voice-2.wav" type="AudioStream" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 15.7143
+height = 0.0
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 15.7143
+height = 0.0
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( -1.19209e-07, 0 )
+scale = Vector2( 0.7, 0.702106 )
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 7.15256e-07, 0 )
+frames = SubResource( 1 )
+offset = Vector2( 0, -18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 7.15256e-07, 0.0428424 )
+shape = SubResource( 2 )
+
+[node name="AudioSteps" type="AudioStreamPlayer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -7.15256e-07, 0 )
+offset = Vector2( 130, 0 )
+current = true
+
+[node name="Aux" type="Area2D" parent="."]
+
+[node name="AuxCollision" type="CollisionShape2D" parent="Aux"]
+position = Vector2( -1.19209e-06, -1.43051e-06 )
+shape = SubResource( 3 )
+
+[node name="HeyVoice1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+pitch_scale = 0.8
+
+[node name="HeyVoice2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+pitch_scale = 0.8

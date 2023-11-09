@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/objects/WordsBullet.gd" type="Script" id=1]
+[ext_resource path="res://src/interface/Images/quote-box.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 500, 348 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 22, 16.25 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 25.5, 19.5 )
+
+[node name="WordsBullet" type="RigidBody2D"]
+z_index = 2
+mass = 0.23
+contacts_reported = 1
+contact_monitor = true
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0.729412 )
+scale = Vector2( 0.125, 0.125 )
+frames = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, 0.25 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 7 )
+
+[connection signal="body_entered" from="." to="." method="_on_WordsBullet_body_entered"]

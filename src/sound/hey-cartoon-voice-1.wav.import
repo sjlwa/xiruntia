@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hey-cartoon-voice-1.wav-09849a0cc73bf11026775501231bb01b.sample"
+
+[deps]
+
+source_file="res://src/sound/hey-cartoon-voice-1.wav"
+dest_files=[ "res://.import/hey-cartoon-voice-1.wav-09849a0cc73bf11026775501231bb01b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

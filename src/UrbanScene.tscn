@@ -1,0 +1,64 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://src/UrbanMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/interface/ProgressBars.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Enemies.gd" type="Script" id=4]
+[ext_resource path="res://src/UrbanScene.gd" type="Script" id=5]
+[ext_resource path="res://src/sound/music/break1.mp3" type="AudioStream" id=6]
+[ext_resource path="res://src/interface/MiniMap.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/RuralEntrance.gd" type="Script" id=8]
+[ext_resource path="res://src/interface/PauseMenu.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/interface/WinMenu.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/interface/GameOverMenu.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/interface/AlertMessage.tscn" type="PackedScene" id=12]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 103.121
+
+[node name="UrbanScene" type="YSort"]
+script = ExtResource( 5 )
+
+[node name="Enemies" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -53, -234 )
+scale = Vector2( 1, 1 )
+
+[node name="UrbanMap" parent="." instance=ExtResource( 1 )]
+modulate = Color( 1, 0.870588, 0.619608, 1 )
+scale = Vector2( 2, 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -14.0
+pitch_scale = 0.7
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="RuralEntrance" type="Area2D" parent="." groups=["minimap_objects"]]
+position = Vector2( -464, -423 )
+z_index = 2
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RuralEntrance"]
+position = Vector2( -47, -66 )
+shape = SubResource( 1 )
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="MiniMap" parent="GUI" instance=ExtResource( 7 )]
+
+[node name="ProgressBars" parent="GUI" instance=ExtResource( 3 )]
+
+[node name="PauseMenu" parent="GUI" instance=ExtResource( 9 )]
+
+[node name="GameOverMenu" parent="GUI" instance=ExtResource( 11 )]
+
+[node name="WinMenu" parent="GUI" instance=ExtResource( 10 )]
+
+[node name="AlertMessage" parent="GUI" instance=ExtResource( 12 )]
+
+[connection signal="body_entered" from="RuralEntrance" to="." method="_on_RuralEntrance_body_entered"]

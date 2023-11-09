@@ -1,0 +1,110 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/interface/Images/Arrow.png" type="Texture" id=1]
+[ext_resource path="res://src/interface/MiniMap.gd" type="Script" id=2]
+[ext_resource path="res://src/interface/Images/pos.png" type="Texture" id=3]
+[ext_resource path="res://src/interface/Images/waterdrop.png" type="Texture" id=4]
+[ext_resource path="res://src/interface/Images/barrel.png" type="Texture" id=5]
+[ext_resource path="res://src/sprites/characters/town citizens/Masc. Citizens/Hark/HarkHead.png" type="Texture" id=6]
+[ext_resource path="res://src/interface/Images/ruralIcon.png" type="Texture" id=7]
+[ext_resource path="res://src/interface/Images/cityIcon.png" type="Texture" id=8]
+[ext_resource path="res://src/sprites/characters/town citizens/Fem. Citizens/Khali/KhaliHead.png" type="Texture" id=9]
+[ext_resource path="res://src/sprites/characters/town citizens/Masc. Citizens/Reza/RezaHead.png" type="Texture" id=10]
+[ext_resource path="res://src/sprites/characters/town citizens/Masc. Citizens/Serek/SerekHead.png" type="Texture" id=11]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.2, 0, 0.266667, 0.862745 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.2, 0, 0.266667, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="MiniMap" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 9.0
+margin_top = 4.0
+margin_right = 9.0
+margin_bottom = 4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -267.0
+margin_top = 203.0
+margin_right = -17.0
+margin_bottom = 383.0
+rect_scale = Vector2( 1, 0.99337 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rural_icon" type="Sprite" parent="Control/Panel"]
+visible = false
+position = Vector2( 136.2, 117.6 )
+scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 7 )
+
+[node name="urban_icon" type="Sprite" parent="Control/Panel"]
+visible = false
+position = Vector2( 403.152, 348.096 )
+scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 8 )
+
+[node name="ArrowMark" type="Sprite" parent="Control/Panel"]
+visible = false
+position = Vector2( 58, 49 )
+scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 1 )
+
+[node name="PlayerMark" type="Sprite" parent="Control/Panel"]
+position = Vector2( 188, 62 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 3 )
+
+[node name="khali_head_icon" type="Sprite" parent="Control/Panel"]
+visible = false
+position = Vector2( 136.2, 117.6 )
+texture = ExtResource( 9 )
+
+[node name="water_wasting_icon" type="Sprite" parent="Control/Panel"]
+visible = false
+position = Vector2( 69, 22 )
+scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 4 )
+
+[node name="hark_head_icon" type="Sprite" parent="Control/Panel"]
+visible = false
+position = Vector2( 136.2, 117.6 )
+scale = Vector2( 1.96, 1.96 )
+texture = ExtResource( 6 )
+
+[node name="barrel_icon" type="Sprite" parent="Control/Panel"]
+visible = false
+position = Vector2( 136.2, 117.6 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 5 )
+
+[node name="reza_head_icon" type="Sprite" parent="Control/Panel"]
+visible = false
+position = Vector2( 136.2, 117.6 )
+scale = Vector2( 1.96, 1.96 )
+texture = ExtResource( 10 )
+
+[node name="serek_head_icon" type="Sprite" parent="Control/Panel"]
+visible = false
+position = Vector2( 136.2, 117.6 )
+scale = Vector2( 1.96, 1.96 )
+texture = ExtResource( 11 )

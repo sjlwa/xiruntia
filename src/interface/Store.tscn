@@ -1,0 +1,178 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://src/interface/Store.gd" type="Script" id=1]
+[ext_resource path="res://src/interface/Images/barrel.png" type="Texture" id=2]
+[ext_resource path="res://src/fonts/Grungeldana.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://src/sound/PowerUp1.wav" type="AudioStream" id=4]
+[ext_resource path="res://src/sound/Hit6.wav" type="AudioStream" id=5]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.682353, 0.117647, 0.262745, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=7]
+size = 14
+font_data = ExtResource( 3 )
+
+[node name="Store" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1024.0
+margin_bottom = -600.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 541.0
+margin_top = 9.0
+margin_right = 757.0
+margin_bottom = 199.0
+rect_pivot_offset = Vector2( 193, 4 )
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Barrel" type="Button" parent="Panel"]
+anchor_right = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = 67.0
+rect_scale = Vector2( 1.00428, 1 )
+focus_mode = 0
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Panel/Barrel"]
+position = Vector2( 24.9169, 30 )
+scale = Vector2( 0.994064, 1 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Panel/Barrel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -138.408, -7 )
+custom_colors/font_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "
+             Barriles conducto
+			"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="price" type="Label" parent="Panel/Barrel"]
+anchor_top = 0.186
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 52.0043
+margin_top = 21.026
+margin_right = -0.995728
+margin_bottom = 7.0
+rect_pivot_offset = Vector2( -138.408, -7 )
+custom_colors/font_color = Color( 1, 0.4, 0.333333, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "000 Monedas
+			"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="asdasd" type="Button" parent="Panel"]
+visible = false
+anchor_right = 1.0
+margin_left = 8.0
+margin_top = 76.0
+margin_right = -8.0
+margin_bottom = 135.0
+rect_scale = Vector2( 1.00428, 1 )
+focus_mode = 0
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Panel/asdasd"]
+position = Vector2( 24.9169, 30 )
+scale = Vector2( 0.994064, 1 )
+
+[node name="Label" type="Label" parent="Panel/asdasd"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -138.408, -7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "
+             Test
+			"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="price" type="Label" parent="Panel/asdasd"]
+anchor_top = 0.186
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 5.026
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( -138.408, -7 )
+custom_colors/font_color = Color( 0.741176, 0.392157, 0.054902, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "
+             300 Monedas
+			"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="ErrorSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="pressed" from="Panel/Barrel" to="." method="_on_Barrel_pressed"]

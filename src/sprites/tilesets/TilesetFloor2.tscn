@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/sprites/tilesets/iso_tiles2.png" type="Texture" id=1]
+[ext_resource path="res://src/sprites/tilesets/floor-tile-0.png" type="Texture" id=2]
+[ext_resource path="res://src/sprites/tilesets/floor-tiles-1.png" type="Texture" id=3]
+
+[node name="TilesetFloor2" type="Node2D"]
+
+[node name="lava" type="Sprite" parent="."]
+position = Vector2( 177, 5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 317, 5, 150, 78 )
+
+[node name="mud2" type="Sprite" parent="."]
+position = Vector2( 183, 116 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 317, 89, 150, 78 )
+
+[node name="bricks2" type="Sprite" parent="."]
+position = Vector2( -17, 242 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 161, 173, 150, 78 )
+
+[node name="bricks" type="Sprite" parent="."]
+position = Vector2( -211, 240 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 5, 173, 150, 78 )
+
+[node name="mud3" type="Sprite" parent="."]
+position = Vector2( 384, 116 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 473, 89, 150, 78 )
+
+[node name="grass" type="Sprite" parent="."]
+position = Vector2( 384, 232 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 473, 173, 150, 78 )
+
+[node name="ground" type="Sprite" parent="."]
+position = Vector2( 194, 240 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 317, 173, 150, 78 )
+
+[node name="pavement" type="Sprite" parent="."]
+position = Vector2( -12, 113 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 161, 89, 150, 78 )
+
+[node name="dirt" type="Sprite" parent="."]
+position = Vector2( -12, 6 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 161, 5, 150, 78 )
+
+[node name="dirt2" type="Sprite" parent="."]
+position = Vector2( -193, 4 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 5, 5, 150, 78 )
+
+[node name="sand" type="Sprite" parent="."]
+position = Vector2( -193, 107 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 5, 89, 150, 78 )
+
+[node name="bricks3" type="Sprite" parent="."]
+position = Vector2( 354, 10 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 473, 5, 150, 78 )
+
+[node name="grass3" type="Sprite" parent="."]
+position = Vector2( 511, 388 )
+scale = Vector2( 1.99957, 1.33691 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 32 )
+
+[node name="grass2" type="Sprite" parent="."]
+position = Vector2( 498, 284 )
+scale = Vector2( 1.41406, 1.15625 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 32 )

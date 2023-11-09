@@ -1,0 +1,359 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://src/interface/WinMenu.gd" type="Script" id=1]
+[ext_resource path="res://src/fonts/The-Fozderien.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://src/fonts/JetpackJoe.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://src/fonts/Grungeldana.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://src/interface/Images/win1.png" type="Texture" id=5]
+[ext_resource path="res://src/interface/Images/win0.png" type="Texture" id=6]
+[ext_resource path="res://src/sprites/characters/town citizens/Masc. Citizens/Reza/Reza.png" type="Texture" id=7]
+[ext_resource path="res://src/sprites/characters/town citizens/Fem. Citizens/Khali/Khali.png" type="Texture" id=8]
+[ext_resource path="res://src/sound/music/Mystical.ogg" type="AudioStream" id=9]
+[ext_resource path="res://src/interface/Images/coins.png" type="Texture" id=10]
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0.266667, 0, 0.333333, 1 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 4 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 8 )
+region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 8 )
+region = Rect2( 64, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 8 )
+region = Rect2( 96, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 448, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 8 )
+region = Rect2( 32, 448, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 8 )
+region = Rect2( 64, 448, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 8 )
+region = Rect2( 96, 448, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 8 ), SubResource( 16 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "win",
+"speed": 8.0
+} ]
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 7 )
+region = Rect2( 16, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 7 )
+region = Rect2( 32, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 7 )
+region = Rect2( 48, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 224, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 7 )
+region = Rect2( 16, 224, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 7 )
+region = Rect2( 32, 224, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 7 )
+region = Rect2( 48, 224, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "win",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=27]
+size = 46
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=28]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 26
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.556863, 0.356863, 0.00784314, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.556863, 0.356863, 0.00784314, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0.556863, 0.356863, 0.00784314, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.705882, 0.372549, 0, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="WinMenu" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DarkOpacity" type="Panel" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 29 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PausePanel2" type="Panel" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -376.0
+margin_top = -150.0
+margin_right = -136.0
+margin_bottom = 150.0
+rect_pivot_offset = Vector2( -747, -67 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/PausePanel2"]
+margin_left = 17.0
+margin_top = 150.0
+margin_right = 225.0
+margin_bottom = 299.0
+custom_colors/font_color = Color( 0.266667, 0, 0.333333, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Se termino el tiempo.
+
+Los habitantes de Xiruntia
+han sobrevivido. El pueblo
+se mantendra por un tiempo."
+align = 3
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="image" type="Sprite" parent="Control/PausePanel2"]
+position = Vector2( 119, 84 )
+scale = Vector2( 1.656, 1.833 )
+texture = ExtResource( 6 )
+
+[node name="Khali" type="AnimatedSprite" parent="Control/PausePanel2"]
+position = Vector2( 161, 70 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 17 )
+frame = 3
+playing = true
+
+[node name="Reza" type="AnimatedSprite" parent="Control/PausePanel2"]
+position = Vector2( 87, 86 )
+scale = Vector2( 4.3, 4.3 )
+frames = SubResource( 22 )
+frame = 2
+playing = true
+
+[node name="PausePanel3" type="Panel" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -120.0
+margin_top = -150.0
+margin_right = 120.0
+margin_bottom = 150.0
+rect_pivot_offset = Vector2( -747, -67 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/PausePanel3"]
+margin_left = 15.0
+margin_top = 148.0
+margin_right = 228.0
+margin_bottom = 297.0
+custom_colors/font_color = Color( 0.266667, 0, 0.333333, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Gracias a tu ayuda la gente 
+desperdicia menos el agua y
+el pueblo se podra abastecer.
+Pero esto no se debe quedar
+aqui. Si ves una situacion que
+perjudique al agua, actua."
+align = 3
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dead" type="Sprite" parent="Control/PausePanel3"]
+position = Vector2( 119, 84 )
+scale = Vector2( 1.65625, 1.83333 )
+texture = ExtResource( 5 )
+
+[node name="PausePanel" type="Panel" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 136.0
+margin_top = -150.0
+margin_right = 376.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( -747, -67 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/PausePanel"]
+margin_left = 8.0
+margin_top = 38.0
+margin_right = 227.0
+margin_bottom = 142.0
+custom_colors/font_color = Color( 0.266667, 0, 0.333333, 1 )
+custom_fonts/font = SubResource( 27 )
+text = "Salvaste
+el dia"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PausePanel4" type="Panel" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 136.0
+margin_top = 45.0
+margin_right = 376.0
+margin_bottom = 105.0
+rect_pivot_offset = Vector2( -747, -67 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TotalCoins" type="Label" parent="Control/PausePanel4"]
+margin_left = 8.0
+margin_top = 3.0
+margin_right = 231.0
+margin_bottom = 59.0
+custom_colors/font_color = Color( 0.266667, 0, 0.333333, 1 )
+custom_fonts/font = SubResource( 28 )
+text = "Total de monedas: "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Control/PausePanel4"]
+position = Vector2( 27, 31 )
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 10 )
+
+[node name="GoToMenuButton" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 136.0
+margin_top = 120.0
+margin_right = 376.0
+margin_bottom = 150.0
+rect_pivot_offset = Vector2( -91, -31 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_colors/font_color_focus = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_colors/font_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_colors/font_color_hover = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_colors/font_color_pressed = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_fonts/font = SubResource( 23 )
+custom_styles/hover = SubResource( 24 )
+custom_styles/pressed = SubResource( 25 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/normal = SubResource( 7 )
+text = "CONTINUAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[connection signal="pressed" from="Control/GoToMenuButton" to="." method="_on_GoToMenuButton_pressed"]

@@ -1,0 +1,376 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://src/interface/HowToPlayMenu.gd" type="Script" id=1]
+[ext_resource path="res://src/fonts/The-Fozderien.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://src/fonts/JetpackJoe.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://src/interface/Images/controls-wasd.png" type="Texture" id=4]
+[ext_resource path="res://src/fonts/Grungeldana.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://src/interface/Images/balancebar.png" type="Texture" id=8]
+[ext_resource path="res://src/interface/Images/recipientbar.png" type="Texture" id=9]
+[ext_resource path="res://src/interface/Images/timebar.png" type="Texture" id=10]
+[ext_resource path="res://src/interface/Images/barrel.png" type="Texture" id=11]
+[ext_resource path="res://src/interface/Images/e.png" type="Texture" id=12]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 18
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 46
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 26
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.866667, 0.866667, 0.866667, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.866667, 0.866667, 0.866667, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.866667, 0.866667, 0.866667, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.333333, 0, 0.4, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="HowToPlayMenu" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DarkOpacity" type="Panel" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 1.0
+margin_bottom = 1.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CInstrucciones" type="Control" parent="Control"]
+anchor_left = 0.183
+anchor_right = 0.183
+margin_left = -151.392
+margin_top = 27.0
+margin_right = 151.608
+margin_bottom = 552.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instrucciones" type="Label" parent="Control/CInstrucciones"]
+margin_top = 32.0
+margin_right = 112.0
+margin_bottom = 57.0
+rect_pivot_offset = Vector2( 29, 13 )
+custom_colors/font_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Instrucciones:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions" type="Label" parent="Control/CInstrucciones"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -191.5
+margin_right = 291.0
+margin_bottom = -62.5
+rect_pivot_offset = Vector2( 29, 13 )
+custom_colors/font_color = Color( 1, 1, 1, 0.941176 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Evita que los habitantes se queden sin agua en el mayor numero de dias posibles. Convence a la gente a no desperdiciar el agua. Mientras mas ayudes, la balanza se nivela. De lo contrario, no sobreviviran."
+align = 3
+valign = 3
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bar" type="Sprite" parent="Control/CInstrucciones"]
+position = Vector2( 96, 220 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 8 )
+
+[node name="minimapa3" type="Label" parent="Control/CInstrucciones"]
+anchor_left = 1.0
+anchor_top = -0.204
+anchor_right = 1.0
+anchor_bottom = -0.204
+margin_left = -307.0
+margin_top = 378.1
+margin_right = 275.0
+margin_bottom = 501.1
+rect_pivot_offset = Vector2( 85, -104 )
+custom_colors/font_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Llena tu recipiente cuando veas agua desperdiciandose. Cuando puedas, depositala en los barriles.
+
+
+
+Al terminar el dia, se decidira el destino de los habitantes."
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bar2" type="Sprite" parent="Control/CInstrucciones"]
+position = Vector2( 95, 327 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 9 )
+
+[node name="bar3" type="Sprite" parent="Control/CInstrucciones"]
+position = Vector2( 94, 430 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="bar4" type="Sprite" parent="Control/CInstrucciones"]
+position = Vector2( 250, 323 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 11 )
+
+[node name="minimapa" type="Label" parent="Control/CInstrucciones"]
+anchor_left = 1.0
+anchor_top = -0.204
+anchor_right = 1.0
+anchor_bottom = -0.204
+margin_left = 24.0
+margin_top = 171.1
+margin_right = 249.0
+margin_bottom = 252.1
+rect_pivot_offset = Vector2( 40, 0 )
+custom_colors/font_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Obten monedas y usalas para mejorar la infraestructura del pueblo."
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="minimapa2" type="Label" parent="Control/CInstrucciones"]
+anchor_left = 1.0
+anchor_top = -0.204
+anchor_right = 1.0
+anchor_bottom = -0.204
+margin_left = 27.0
+margin_top = 279.1
+margin_right = 263.0
+margin_bottom = 339.1
+rect_pivot_offset = Vector2( 85, -104 )
+custom_colors/font_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Usa el minimapa para
+encontrar habitantes,
+objetos y lugares."
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CControles" type="Control" parent="Control"]
+anchor_left = 0.767
+anchor_right = 0.767
+margin_left = -209.408
+margin_top = 87.0
+margin_right = 209.592
+margin_bottom = 561.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controles" type="Label" parent="Control/CControles"]
+anchor_left = 0.161
+anchor_top = -0.191
+anchor_right = 0.161
+anchor_bottom = -0.191
+margin_left = -11.829
+margin_top = 107.916
+margin_right = 92.1709
+margin_bottom = 132.916
+rect_pivot_offset = Vector2( 29, 13 )
+custom_colors/font_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Controles:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ApuntaAlObjetivo" type="Label" parent="Control/CControles"]
+anchor_left = 1.0
+anchor_top = -0.204
+anchor_right = 1.0
+anchor_bottom = -0.204
+margin_left = -272.0
+margin_top = 416.696
+margin_right = -127.0
+margin_bottom = 441.696
+rect_pivot_offset = Vector2( 29, 13 )
+custom_colors/font_color = Color( 0.733333, 0, 0.8, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="e" type="Sprite" parent="Control/CControles"]
+visible = false
+position = Vector2( 299, 137.65 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 12 )
+
+[node name="wasd" type="Sprite" parent="Control/CControles"]
+visible = false
+position = Vector2( 118.2, 117.1 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 4 )
+
+[node name="Movimiento" type="Label" parent="Control/CControles"]
+anchor_top = -0.21
+anchor_bottom = -0.21
+margin_left = 56.0
+margin_top = 161.54
+margin_right = 206.0
+margin_bottom = 368.54
+rect_pivot_offset = Vector2( 29, 13 )
+custom_colors/font_color = Color( 0.6, 0, 0.666667, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Arriba:
+Izquierda:
+Abajo:
+Derecha:
+
+Cambiar de ataque
+Apunta al objetivo:
+Atacar:
+Recolectar:
+Interaccion:"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Movimiento2" type="Label" parent="Control/CControles"]
+anchor_top = -0.21
+anchor_bottom = -0.21
+margin_left = 248.0
+margin_top = 161.54
+margin_right = 396.0
+margin_bottom = 368.54
+rect_pivot_offset = Vector2( 29, 13 )
+custom_colors/font_color = Color( 0.862745, 0.482353, 0.203922, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "W
+A
+S
+D
+
+E
+Posicion de mouse
+Espacio
+Espacio
+Espacio"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -500.0
+margin_top = -8.0
+margin_right = 524.0
+margin_bottom = -504.0
+custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -98.0
+margin_top = 2.0
+margin_right = 102.0
+margin_bottom = 61.0
+custom_colors/font_color = Color( 0.866667, 0.866667, 0.866667, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "COMO JUGAR"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResumeButton" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -102.0
+margin_top = -57.0
+margin_right = 98.0
+margin_bottom = -33.0
+custom_colors/font_color_disabled = Color( 0.133333, 0.133333, 0.133333, 1 )
+custom_colors/font_color_focus = Color( 0.133333, 0.133333, 0.133333, 1 )
+custom_colors/font_color = Color( 0.866667, 0.866667, 0.866667, 1 )
+custom_colors/font_color_hover = Color( 0.133333, 0.133333, 0.133333, 1 )
+custom_colors/font_color_pressed = Color( 0.133333, 0.133333, 0.133333, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+text = "VOLVER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Control/ResumeButton" to="." method="_on_ResumeButton_pressed"]

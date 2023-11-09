@@ -1,0 +1,500 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://src/interface/DaysCounter.gd" type="Script" id=1]
+[ext_resource path="res://src/interface/Images/dialog-pixel.png" type="Texture" id=2]
+[ext_resource path="res://src/interface/powers.gd" type="Script" id=5]
+[ext_resource path="res://src/fonts/The-Fozderien.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://src/interface/Images/stamina.png" type="Texture" id=7]
+[ext_resource path="res://src/interface/Images/timer.png" type="Texture" id=8]
+[ext_resource path="res://src/interface/Images/6514897.png" type="Texture" id=9]
+[ext_resource path="res://src/interface/Images/quote-box.png" type="Texture" id=10]
+[ext_resource path="res://src/interface/CoinsCounter.gd" type="Script" id=11]
+[ext_resource path="res://src/fonts/Grungeldana.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://src/interface/Images/coins.png" type="Texture" id=13]
+[ext_resource path="res://src/interface/Images/waterdrop-container.png" type="Texture" id=14]
+[ext_resource path="res://src/interface/ProgressBars.gd" type="Script" id=15]
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=15]
+font_data = ExtResource( 12 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.2, 0, 0.266667, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="BitmapFont" id=2]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.733333, 0, 0.266667, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=13]
+size = 24
+font_data = ExtResource( 6 )
+
+[sub_resource type="BitmapFont" id=5]
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.733333, 0.4, 0.133333, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.733333, 0, 0.266667, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="BitmapFont" id=8]
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.192157, 0.290196, 0.662745, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.470588, 0.192157, 0.662745, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+border_width_bottom = 1
+border_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+border_color = Color( 0.2, 0.2, 0.2, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.2, 0, 0.266667, 1 )
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+border_color = Color( 0.2, 0, 0.266667, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=18]
+font_data = ExtResource( 12 )
+
+[node name="ProgressBars" type="Node"]
+
+[node name="CoinsCounter" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = -0.013
+anchor_right = 1.0
+anchor_bottom = -0.013
+margin_left = -350.0
+margin_top = -0.2
+margin_right = 85.0
+margin_bottom = 122.8
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="CoinsCounter"]
+anchor_left = 2.156
+anchor_top = 0.675
+anchor_right = 2.156
+anchor_bottom = 0.675
+margin_left = -846.86
+margin_top = -65.025
+margin_right = -596.86
+margin_bottom = -25.025
+custom_styles/panel = SubResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinsLabel" type="Label" parent="CoinsCounter"]
+anchor_left = 0.482
+anchor_top = 0.5
+anchor_right = 0.482
+anchor_bottom = 0.5
+margin_left = -81.67
+margin_top = -29.5
+margin_right = -1.67
+margin_bottom = -6.5
+custom_colors/font_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Monedas:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TotalCoins" type="Label" parent="CoinsCounter"]
+anchor_left = 0.482
+anchor_top = 0.5
+anchor_right = 0.482
+anchor_bottom = 0.5
+margin_left = 22.33
+margin_top = -29.5
+margin_right = 117.33
+margin_bottom = -6.5
+custom_colors/font_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "9999"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="CoinsCounter"]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 111, 38 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="ProgressBars" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.52588e-05
+margin_top = 2.0
+margin_bottom = 2.0
+rect_rotation = -0.120817
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bars" type="Panel" parent="ProgressBars"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -259.122
+margin_top = 58.6129
+margin_right = -9.12201
+margin_bottom = 198.613
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeBar" type="ProgressBar" parent="ProgressBars/Bars"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.9494
+margin_top = -130.0
+margin_right = 116.051
+margin_bottom = -122.0
+custom_colors/font_color = Color( 0.866667, 0.866667, 0.866667, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+max_value = 15.0
+value = 15.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ProgressBars/Bars/TimeBar"]
+margin_left = -1.0592
+margin_top = 14.0843
+margin_right = 172.941
+margin_bottom = 34.0843
+custom_colors/font_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "TIEMPO RESTANTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ProgressBars/Bars/TimeBar"]
+position = Vector2( -18.0017, 11 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 8 )
+
+[node name="BalanceBar" type="ProgressBar" parent="ProgressBars/Bars"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -83.9662
+margin_top = -29.0
+margin_right = 116.034
+margin_bottom = -21.0
+custom_colors/font_color = Color( 0.866667, 0.866667, 0.866667, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_styles/fg = SubResource( 6 )
+custom_styles/bg = SubResource( 7 )
+value = 10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ProgressBars/Bars/BalanceBar"]
+margin_top = 14.0
+margin_right = 212.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "BALANZA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ProgressBars/Bars/BalanceBar"]
+position = Vector2( -18.002, 11.0001 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 9 )
+
+[node name="RecipientBar" type="ProgressBar" parent="ProgressBars/Bars"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -83.9832
+margin_top = 72.0
+margin_right = 116.017
+margin_bottom = 80.0
+custom_colors/font_color = Color( 0.866667, 0.866667, 0.866667, 1 )
+custom_fonts/font = SubResource( 8 )
+custom_styles/fg = SubResource( 9 )
+custom_styles/bg = SubResource( 4 )
+value = 32.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ProgressBars/Bars/RecipientBar"]
+margin_top = 14.0
+margin_right = 160.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "RECIPIENTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ProgressBars/Bars/RecipientBar"]
+position = Vector2( -17.998, 11.0042 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 14 )
+
+[node name="StaminaBar" type="ProgressBar" parent="ProgressBars/Bars"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -84.0506
+margin_top = 104.0
+margin_right = 115.949
+margin_bottom = 112.0
+custom_colors/font_color = Color( 0.866667, 0.866667, 0.866667, 1 )
+custom_fonts/font = SubResource( 8 )
+custom_styles/fg = SubResource( 16 )
+custom_styles/bg = SubResource( 4 )
+value = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ProgressBars/Bars/StaminaBar"]
+margin_top = 14.0
+margin_right = 160.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "AGUANTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ProgressBars/Bars/StaminaBar"]
+position = Vector2( -17.9978, 11.0043 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 7 )
+
+[node name="powers" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -258.0
+margin_top = 394.0
+margin_right = 1.0
+margin_bottom = 614.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WordsBulletButton" type="Button" parent="powers"]
+margin_left = -1.0
+margin_right = 55.0
+margin_bottom = 56.0
+rect_rotation = 0.213857
+focus_mode = 0
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+toggle_mode = true
+button_mask = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialog-pixel" type="Sprite" parent="powers/WordsBulletButton"]
+modulate = Color( 0.870588, 0.870588, 0.870588, 1 )
+position = Vector2( 26.0137, 26.9935 )
+rotation = -0.00857036
+scale = Vector2( 0.1, 0.12 )
+texture = ExtResource( 10 )
+
+[node name="Button" type="Button" parent="powers"]
+margin_left = 64.0
+margin_right = 120.0
+margin_bottom = 56.0
+rect_rotation = 0.213857
+focus_mode = 0
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+toggle_mode = true
+button_mask = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialog-pixel" type="Sprite" parent="powers/Button"]
+visible = false
+position = Vector2( 24, 24 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+
+[node name="Button2" type="Button" parent="powers"]
+margin_left = 128.0
+margin_right = 184.0
+margin_bottom = 56.0
+rect_rotation = 0.213857
+focus_mode = 0
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+toggle_mode = true
+button_mask = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialog-pixel" type="Sprite" parent="powers/Button2"]
+visible = false
+position = Vector2( 24, 24 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+
+[node name="Button3" type="Button" parent="powers"]
+margin_left = 193.0
+margin_right = 249.0
+margin_bottom = 56.0
+rect_rotation = 0.213857
+focus_mode = 0
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+toggle_mode = true
+button_mask = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialog-pixel" type="Sprite" parent="powers/Button3"]
+visible = false
+position = Vector2( 24, 24 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+
+[node name="NullButton" type="Button" parent="powers"]
+visible = false
+margin_left = -62.0
+margin_right = -6.0
+margin_bottom = 56.0
+rect_rotation = 0.213857
+focus_mode = 0
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+toggle_mode = true
+button_mask = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DaysCounter" type="Control" parent="."]
+margin_right = 199.0
+margin_bottom = 201.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="DaysCounter"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 88.0
+margin_bottom = 48.0
+custom_styles/panel = SubResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DaysCounter/Panel"]
+margin_left = 3.0
+margin_top = 1.0
+margin_right = 77.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 0.933333, 0.933333, 0.933333, 1 )
+custom_fonts/font = SubResource( 18 )
+text = "Dia 0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
